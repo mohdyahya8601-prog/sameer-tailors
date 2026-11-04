@@ -20,11 +20,12 @@
     nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;letter-spacing:1px;color:var(--gold)}
     .brand span{display:block;font:9px 'DM Sans',sans-serif;letter-spacing:4px;color:var(--cream);text-transform:uppercase;margin-top:-5px}
-    .navlinks{display:flex;gap:27px;align-items:center;font-size:13px;color:#ddd}
-    .navlinks a:hover{color:var(--gold)}
-    .nav-cta,.btn{display:inline-block;padding:12px 20px;border:1px solid var(--gold);color:var(--gold);font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:.25s}
-    .nav-cta:hover,.btn:hover{background:var(--gold);color:#090909}
-    .menu{display:none;background:none;border:1px solid #5c4828;color:var(--gold);padding:8px 11px;font-size:20px}
+    .navlinks{display:flex;gap:11px;align-items:center;font-size:13px;color:#ddd}
+    .navlinks a{display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border:1px solid rgba(201,164,92,.58);border-radius:999px;background:rgba(201,164,92,.07);color:#eee8dc;box-shadow:0 0 7px rgba(201,164,92,.16),inset 0 0 7px rgba(201,164,92,.05);transition:background .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease}
+    .navlinks a:hover,.navlinks a:focus-visible{background:var(--gold);color:#090909;box-shadow:0 0 9px rgba(201,164,92,.75),0 0 22px rgba(201,164,92,.38);transform:translateY(-2px);outline:none}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border:1px solid var(--gold);border-radius:999px;color:#f8e7bf;background:linear-gradient(135deg,rgba(201,164,92,.20),rgba(201,164,92,.05));font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 10px rgba(201,164,92,.22),inset 0 0 10px rgba(201,164,92,.08);transition:all .28s ease}
+    .nav-cta:hover,.btn:hover{background:linear-gradient(135deg,#f3d28d,var(--gold));color:#090909;transform:translateY(-3px);box-shadow:0 0 12px rgba(201,164,92,.85),0 0 28px rgba(201,164,92,.4)}
+    .menu{display:none;background:none;border:1px solid #5c4828;border-radius:12px;color:var(--gold);padding:8px 11px;font-size:20px;cursor:pointer}
     .hero{min-height:650px;display:grid;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 48%,rgba(0,0,0,.18) 100%),url('https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=2000&q=85') center/cover}
     .hero-content{max-width:650px;padding:100px 0}
     .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:11px;font-weight:700}
@@ -68,10 +69,44 @@
     .contact-panel input:focus,.contact-panel textarea:focus{border-color:var(--gold)}
     .contact-panel textarea{min-height:110px;resize:vertical}
     .contact-panel button{width:100%;margin-top:8px;background:var(--gold);border:1px solid var(--gold);padding:14px;color:#090909;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer}
+
+    .owner-sign{margin:22px 0 24px;color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic}
+    .owner-sign span{display:inline-block;margin-left:7px;color:var(--gold);font-size:27px;font-weight:700;letter-spacing:.5px;text-shadow:0 0 12px rgba(201,164,92,.25)}
+    .service-card{border-radius:15px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .service-card:before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.8}
+    .service-number{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:2px;font-weight:700}
+    .gallery-grid figure{position:relative;overflow:hidden;border:1px solid rgba(201,164,92,.65);border-radius:12px;background:#111;box-shadow:0 0 12px rgba(201,164,92,.12)}
+    .gallery-grid img{height:300px}
+    .gallery-grid figcaption{padding:11px 14px;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:21px;text-align:center;letter-spacing:.5px}
+    .contact-item a{color:#f2d28e;text-decoration:underline;text-decoration-color:rgba(201,164,92,.5);text-underline-offset:4px}
+    .back-top{border-radius:50%;box-shadow:0 0 12px rgba(201,164,92,.35),0 0 25px rgba(201,164,92,.16)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature-card{padding:27px 24px;background:#121212;border:1px solid #30291e;text-align:center;transition:.25s}
+    .feature-card:hover{border-color:var(--gold);box-shadow:0 0 22px rgba(201,164,92,.13);transform:translateY(-4px)}
+    .feature-icon{width:48px;height:48px;margin:0 auto 15px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:21px}
+    .feature-card h3{font-size:25px;margin-bottom:8px}
+    .feature-card p{font-size:13px;color:var(--muted)}
+    .process{background:#101010}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+    .process-card{padding:28px;border-left:2px solid var(--gold);background:#151515}
+    .process-card .step{font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+    .process-card h3{font-size:28px;margin:8px 0}
+    .process-card p{font-size:13px;color:var(--muted)}
+    .faq-list{max-width:800px;margin:auto;display:grid;gap:12px}
+    .faq-list details{background:#141414;border:1px solid #332b1d;padding:18px 21px}
+    .faq-list summary{cursor:pointer;color:var(--cream);font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:15px}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary:after{content:'+';color:var(--gold);font-size:20px}
+    .faq-list details[open] summary:after{content:'−'}
+    .faq-list details p{color:var(--muted);font-size:13px;padding-top:12px}
+    .back-top{position:fixed;right:20px;bottom:20px;z-index:15;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#111;color:var(--gold);box-shadow:0 0 14px rgba(201,164,92,.25);cursor:pointer;font-size:20px;display:none}
+    .back-top.show{display:block}
+    @media(max-width:760px){.feature-grid,.process-grid{grid-template-columns:1fr}.navlinks{align-items:stretch}.navlinks a{justify-content:center}}
+
     footer{border-top:1px solid #302a20;padding:27px 0;color:#a9a296;font-size:12px}
     .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     .gold{color:var(--gold)}
-    @media(max-width:760px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#101010;padding:22px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #3b3020}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{min-height:590px;background-position:60% center}.hero-content{padding:85px 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.about-photo{min-height:340px}.service-grid{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:220px}.section{padding:70px 0}}
+    @media(max-width:760px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#101010;padding:22px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #3b3020}.navlinks.open{display:flex}.navlinks a{width:100%;justify-content:flex-start}.menu{display:block}.nav-cta{display:none}.hero{min-height:590px;background-position:60% center}.hero-content{padding:85px 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.about-photo{min-height:340px}.service-grid{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:220px}.gallery-grid figcaption{font-size:19px;padding:9px 7px}.section{padding:70px 0}}
     @media(max-width:460px){.service-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:170px}.about-copy h2,.contact-copy h2{font-size:40px}}
   </style>
 </head>
@@ -84,7 +119,7 @@
         <div class="navlinks" id="navlinks">
           <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
         </div>
-        <a class="nav-cta" href="#contact">Visit Our Shop</a>
+        <a class="nav-cta" href="#contact">✦ Visit Our Shop&nbsp; | &nbsp;Shafeeuddin</a>
         <button class="menu" id="menu" aria-label="Open menu">☰</button>
       </nav>
     </div>
@@ -106,27 +141,32 @@
       <div class="about-copy"><div class="eyebrow">Welcome to Sameer Tailors</div><h2>Craftsmanship in Every <span class="gold">Stitch.</span></h2>
         <div class="goldline"></div>
         <p>At Sameer Tailors, we believe good clothing starts with the right fit. From everyday essentials to special-occasion outfits, we focus on careful measurements, neat stitching and details that make a difference.</p>
-        <p>Visit our shop in Mahmudabad and talk to us about your next outfit.</p>
-        <a class="btn" href="#contact">Find Our Shop</a>
+        <p>Visit our shop in Mahmudabad and talk to us about your next outfit. We will help you choose a style that feels right for you.</p>
+        <div class="owner-sign">With regards, <span>Shafeeuddin</span></div>
+        <a class="btn" href="#contact">✦ Find Our Shop</a>
       </div>
     </div></section>
+
+    
 
     <section class="section services" id="services"><div class="container">
       <div class="section-head"><div class="eyebrow">What We Do</div><h2>Our Tailoring Services</h2><p>Classic styles, made with care for your comfort and occasion.</p></div>
       <div class="service-grid">
-        <article class="service-card"><div class="service-number">01</div><h3>Shirts & Trousers</h3><p>Everyday wear with a smart, comfortable fit and clean finishing.</p></article>
-        <article class="service-card"><div class="service-number">02</div><h3>Suits & Coats</h3><p>Sharp formal tailoring for events, work and special occasions.</p></article>
-        <article class="service-card"><div class="service-number">03</div><h3>Sherwani</h3><p>Traditional occasion wear tailored with attention to detail.</p></article>
-        <article class="service-card"><div class="service-number">04</div><h3>Kurta-Pajama</h3><p>Traditional outfits designed for an easy and graceful fit.</p></article>
-        <article class="service-card"><div class="service-number">05</div><h3>School Uniform</h3><p>Neat and practical uniform stitching for everyday use.</p></article>
-        <article class="service-card"><div class="service-number">06</div><h3>Casual & Party Wear</h3><p>Custom clothing for celebrations, outings and personal style.</p></article>
+        <article class="service-card"><div class="service-number">01 · SMART EVERYDAY</div><h3>Shirts & Trousers</h3><p>Sharp shirts and perfectly tailored trousers, finished for a clean, confident everyday look.</p></article>
+        <article class="service-card"><div class="service-number">02 · FORMAL ELEGANCE</div><h3>Suits & Coats</h3><p>Refined formalwear with precise fitting, graceful lines and details made for special occasions.</p></article>
+        <article class="service-card"><div class="service-number">03 · ROYAL TRADITION</div><h3>Sherwani</h3><p>Elegant traditional occasion wear, tailored to bring a distinguished touch to your celebration.</p></article>
+        <article class="service-card"><div class="service-number">04 · TIMELESS COMFORT</div><h3>Kurta-Pajama</h3><p>Classic ethnic outfits that bring together comfort, graceful style and a well-finished fit.</p></article>
+        <article class="service-card"><div class="service-number">05 · SCHOOL ESSENTIALS</div><h3>School Uniform</h3><p>Neatly stitched school uniforms designed for a smart appearance and comfortable daily wear.</p></article>
+        <article class="service-card"><div class="service-number">06 · YOUR OWN STYLE</div><h3>Casual & Party Wear</h3><p>Custom looks for gatherings and celebrations, made around your preferred style and fit.</p></article>
       </div>
     </div></section>
 
+    
+
     <section class="section" id="gallery"><div class="container">
-      <div class="section-head"><div class="eyebrow">A Look at the Craft</div><h2>Style Gallery</h2><p>Some tailoring inspiration. Replace these sample pictures with your own shop and customer-approved work photos.</p></div>
+      <div class="section-head"><div class="eyebrow">A Look at the Craft</div><h2>Our Style Gallery</h2><p>Explore a selection of traditional, formal and everyday tailoring styles.</p></div>
      
-     <div class="gallery-grid">
+<div class="gallery-grid">
 
   <!-- 1. Coat Pant -->
   <figure>
@@ -176,11 +216,13 @@
 
     <section class="section promise"><div class="container"><div class="eyebrow">Made with Care</div><h2>Your Fit. Your Style.</h2><p>Whether you need a dependable everyday outfit or something special for an important day, Sameer Tailors is here to help bring your clothing idea to life.</p><a class="btn" href="#contact">Get in Touch</a></div></section>
 
+    
+
     <section class="section" id="contact"><div class="container contact-grid">
       <div class="contact-copy"><div class="eyebrow">Visit or Contact Us</div><h2>Let's Create Your <span class="gold">Perfect Fit.</span></h2><p>Come by the shop to discuss your measurements, fabric and design. We look forward to serving you.</p>
         <div class="contact-item"><strong>Shop Name</strong><span>Sameer Tailors</span></div>
         <div class="contact-item"><strong>Address</strong><span>Nai Bazaar, Sabji Mandi, Mahmudabad</span></div>
-        <div class="contact-item"><strong>Phone / WhatsApp</strong><span>Contact number will be added soon</span></div>
+        <div class="contact-item"><strong>Phone / WhatsApp</strong><span><a href="tel:9670507968">9670507968</a> · <a href="https://wa.me/919670507968" target="_blank" rel="noopener">Chat on WhatsApp</a></span></div>
       </div>
       <div class="contact-panel"><h3>Send an Enquiry</h3><p>This sample form opens your email app. Add the shop's email address in the code before publishing.</p>
         <form id="enquiryForm"><input id="customerName" type="text" placeholder="Your name" required><input id="customerPhone" type="tel" placeholder="Your phone number" required><textarea id="customerMessage" placeholder="What would you like stitched?" required></textarea><button type="submit">Prepare Enquiry</button></form>
@@ -189,7 +231,11 @@
   </main>
 
   <footer><div class="container footer-row"><span>© <span id="year"></span> Sameer Tailors. All rights reserved.</span><span>Made with care in <span class="gold">Mahmudabad</span>.</span></div></footer>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
   <script>
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500));
+    backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
     const menuButton = document.getElementById('menu');
     const navLinks = document.getElementById('navlinks');
     menuButton.addEventListener('click', () => navLinks.classList.toggle('open'));
